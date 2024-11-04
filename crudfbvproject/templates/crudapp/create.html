@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'crudapp/base.html' %}
+
+{% block body_block %}
+<div class="jumbotron text-center">
+  <h1>Employee Insertion Form</h1>
+<form method="post">
+  <table border="2"  style="border-collapse:collapse">
+    {{form}}
+  </table>
+<!--  {{form.as_p}}-->
+  {% csrf_token %}
+  <br><br>
+  <input type="submit" value="Add Record">
+</form>
+</div>
+
+{% endblock %}
+
+
+
+# used to insert record (form)

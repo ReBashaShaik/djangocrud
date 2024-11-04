@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'crudapp/base.html' %}
+
+{% block body_block %}
+<div class="jumbotron text-center">
+  <h1>Employee Information Update Form:</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="eno">Emp Number:</label>
+    <input type="text" name="eno" id="eno" value="{{ employe.eno }}"> <br>
+
+    <label for="ename">Emp Name:</label>
+    <input type="text" name="ename" id="ename" value="{{ employe.ename }}"> <br>
+
+    <label for="esal">Emp Salary:</label>
+    <input type="text" name="esal" id="esal" value="{{ employe.esal }}"> <br>
+
+    <label for="eaddr">Emp Address:</label>
+    <input type="text" name="eaddr" id="eaddr" value="{{ employe.eaddr }}"> <br>
+
+    <input type="submit" value="Update Record">
+  </form>
+</div>
+{% endblock %}
+
+
+
+
+# used to insert record (form)
